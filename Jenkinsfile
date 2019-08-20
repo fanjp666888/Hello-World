@@ -4,7 +4,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo 'Hello World Jenkins!!'
-				echo `pwd`
+				echo $(cd $(dirname $0); pwd)
 			}
 		}
 	}
